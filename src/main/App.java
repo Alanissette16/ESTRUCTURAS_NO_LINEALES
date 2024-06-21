@@ -16,7 +16,7 @@ public class App {
         //Instanciamos los hijos del 1
         noderaiz.setLeft(new Node(2));
         noderaiz.setRight(new Node(3));
-        //Instanciamos los hijos del 2
+         //Instanciamos los hijos del 2
         noderaiz.getLeft().setLeft(new Node(4));
         noderaiz.getLeft().setRight(new Node(5));
         //Instanciamos el hijo del 4
