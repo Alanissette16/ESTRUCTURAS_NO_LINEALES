@@ -1,4 +1,5 @@
 package main;
+import main.Materia.Controllers.AVLTree;
 import main.Materia.Controllers.ArbolBinario;
 import main.Materia.Models.Node;
 
@@ -11,35 +12,43 @@ import main.Materia.Models.Node;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        ArbolBinario arbolBinario = new ArbolBinario();
-        Node noderaiz = new Node(1);
-        //Instanciamos los hijos del 1
-        noderaiz.setLeft(new Node(2));
-        noderaiz.setRight(new Node(3));
-         //Instanciamos los hijos del 2
-        noderaiz.getLeft().setLeft(new Node(4));
-        noderaiz.getLeft().setRight(new Node(5));
-        //Instanciamos el hijo del 4
-        noderaiz.getLeft().getLeft().setLeft(new Node(7));
-        //Instanciamos el hijo del 5
-        noderaiz.getLeft().getRight().setLeft(new Node(8));
-        //Instanciamos el hijo del 3
-        noderaiz.getRight().setRight(new Node(6));
+        // ArbolBinario arbolBinario = new ArbolBinario();
+        // Node noderaiz = new Node(1);
+        // //Instanciamos los hijos del 1
+        // noderaiz.setLeft(new Node(2));
+        // noderaiz.setRight(new Node(3));
+        //  //Instanciamos los hijos del 2
+        // noderaiz.getLeft().setLeft(new Node(4));
+        // noderaiz.getLeft().setRight(new Node(5));
+        // //Instanciamos el hijo del 4
+        // noderaiz.getLeft().getLeft().setLeft(new Node(7));
+        // //Instanciamos el hijo del 5
+        // noderaiz.getLeft().getRight().setLeft(new Node(8));
+        // //Instanciamos el hijo del 3
+        // noderaiz.getRight().setRight(new Node(6));
 
-        System.out.println("Preorder Loop");
-        arbolBinario.preOrderRecursivo(noderaiz);
-        System.out.println();
-        System.out.println("Preorder Recursivo");
-        arbolBinario.preOrderRecursivo(noderaiz);
-        System.out.println();
-        System.out.println("Postorder Loop");
-        arbolBinario.postOrderLoop(noderaiz);
-        System.out.println();
-        System.out.println("Postorder Recursivo");
-        arbolBinario.postOrderRecursivo(noderaiz);
-        System.out.println();
-        System.out.println("INorder Recursivo");
-        arbolBinario.InOrderRecursivo(noderaiz);
+        // System.out.println("Preorder Loop");
+        // arbolBinario.preOrderRecursivo(noderaiz);
+        // System.out.println();
+        // System.out.println("Preorder Recursivo");
+        // arbolBinario.preOrderRecursivo(noderaiz);
+        // System.out.println();
+        // System.out.println("Postorder Loop");
+        // arbolBinario.postOrderLoop(noderaiz);
+        // System.out.println();
+        // System.out.println("Postorder Recursivo");
+        // arbolBinario.postOrderRecursivo(noderaiz);
+        // System.out.println();
+        // System.out.println("INorder Recursivo");
+        // arbolBinario.InOrderRecursivo(noderaiz);
+
+        AVLTree tree = new AVLTree();
+
+        int[] values = { 10, 20, 15, 24, 9, 8, 21, 23, 50, 25 };
+
+        for (int value : values) {
+            tree.insert(value);
+        }
 
     }
 }
