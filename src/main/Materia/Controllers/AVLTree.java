@@ -57,6 +57,7 @@ public class AVLTree {
             node.setRight(rightRotate(node.getRight()));
             return leftRotate(node);
         }
+        System.out.println("Inserted Node: "+node.getValue()+" , Balance: "+ balance);
         //Devolver el nodo sin cambios o rotaciones
         return node;
     }
@@ -72,6 +73,7 @@ public class AVLTree {
         //actualizar alturas
         nodeR.setHeight(Math.max(height(nodeR.getLeft()),height(nodeR.getRight()))+1);
         x.setHeight(Math.max(height(x.getLeft()),height(x.getRight()))+1);
+
 
         //devolver una nueva raiz
         return x;
