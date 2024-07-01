@@ -1,7 +1,9 @@
 package main;
 import main.Materia.Controllers.AVLTree;
-import main.Materia.Controllers.ArbolBinario;
-import main.Materia.Models.Node;
+//import main.Materia.Controllers.ArbolBinario;
+//import main.Materia.Models.Node;
+import main.Materia.Controllers.Graph;
+import main.Materia.Models.NodeGraph;
 
 /*
  *                1 
@@ -42,13 +44,36 @@ public class App {
         // System.out.println("INorder Recursivo");
         // arbolBinario.InOrderRecursivo(noderaiz);
 
-        AVLTree tree = new AVLTree();
+        // AVLTree tree = new AVLTree();
 
-        int[] values = { 10, 20, 15, 24, 9, 8, 21, 23, 50, 25 };
+        // int[] values = { 10, 20, 15, 24, 9, 8, 21, 23, 50, 25 };
 
-        for (int value : values) {
-            tree.insert(value);
-        }
+        // for (int value : values) {
+        //     tree.insert(value);
+        // }
 
+
+        runGraph();
+        
+    }
+
+    private static void runGraph() {
+        Graph graph = new Graph();
+
+        //Agregar nodos
+        NodeGraph node1 = graph.addNode(1);
+        NodeGraph node2 = graph.addNode(2);
+        NodeGraph node3 = graph.addNode(3);
+        NodeGraph node4 = graph.addNode(4);
+        NodeGraph node5 = graph.addNode(5);
+        
+        graph.addEdge(node1, node2);
+        graph.addEdge(node1, node3);
+        graph.addEdge(node2, node4);
+        graph.addEdge(node4, node5);
+
+        //Imprimir el Grafo
+        graph.printGraph();
+        
     }
 }
